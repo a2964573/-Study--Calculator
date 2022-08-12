@@ -7,35 +7,36 @@
     <title>계산기</title>
 </head>
 <body>
+    <div class="title">계산기</div>
     <div class="calculator">
         <div class="header">
             <input type="text" id="display" value="" readonly/>
         </div>
         <div class="content">
-            <button type="button" id="operatorPlus" value="+" onclick=onClickOperator(value)>+</button>
-            <button type="button" id="operatorMinus" value="-" onclick=onClickOperator(value)>-</button>
-            <button type="button" id="operatorMultiply" value="*" onclick=onClickOperator(value)>*</button>
-            <button type="button" id="operatorDivision" value="/" onclick=onClickOperator(value)>/</button>
+            <button type="button" class="tool" value="+" onclick=onClickOperator(value)>+</button>
+            <button type="button" class="tool" value="-" onclick=onClickOperator(value)>-</button>
+            <button type="button" class="tool" value="*" onclick=onClickOperator(value)>*</button>
+            <button type="button" class="tool" value="/" onclick=onClickOperator(value)>/</button>
 
-            <button type="button" id="numberSeven" value=7 onclick=onClickNumberButton(value)>7</button>
-            <button type="button" id="numberEight" value=8 onclick=onClickNumberButton(value)>8</button>
-            <button type="button" id="numberNine" value=9 onclick=onClickNumberButton(value)>9</button>
-            <button type="button" id="clear" onclick=onClickClear()>C</button>
+            <button type="button" class="num" value=7 onclick=onClickNumberButton(value)>7</button>
+            <button type="button" class="num" value=8 onclick=onClickNumberButton(value)>8</button>
+            <button type="button" class="num" value=9 onclick=onClickNumberButton(value)>9</button>
+            <button type="button" class="tool" onclick=onClickClear()>C</button>
 
-            <button type="button" id="numberFour" value=4 onclick=onClickNumberButton(value)>4</button>
-            <button type="button" id="numberFive" value=5 onclick=onClickNumberButton(value)>5</button>
-            <button type="button" id="numberSix" value=6 onclick=onClickNumberButton(value)>6</button>
-            <button type="button" id="clearEntry" onclick=onClickClearEntry()>CE</button>
+            <button type="button" class="num" value=4 onclick=onClickNumberButton(value)>4</button>
+            <button type="button" class="num" value=5 onclick=onClickNumberButton(value)>5</button>
+            <button type="button" class="num" value=6 onclick=onClickNumberButton(value)>6</button>
+            <button type="button" class="tool" onclick=onClickClearEntry()>CE</button>
 
-            <button type="button" id="numberOne" value=1 onclick=onClickNumberButton(value)>1</button>
-            <button type="button" id="numberTwo" value=2 onclick=onClickNumberButton(value)>2</button>
-            <button type="button" id="numberThree" value=3 onclick=onClickNumberButton(value)>3</button>
-            <button type="button" id="backSpace">←</button>
+            <button type="button" class="num" value=1 onclick=onClickNumberButton(value)>1</button>
+            <button type="button" class="num" value=2 onclick=onClickNumberButton(value)>2</button>
+            <button type="button" class="num" value=3 onclick=onClickNumberButton(value)>3</button>
+            <button type="button" class="tool" onclick=onClickBackSpace()>←</button>
 
-            <button id="changeSign">+/-</button>
-            <button id="numberZero" value=0 onclick=onClickNumberButton(value)>0</button>
-            <button id="dicimalPoint" value=".">.</button>
-            <button id="calculate" onclick=onClickCalculate()>=</button>
+            <button type="button" class="num" onclick=onClickChangeSign()>+/-</button>
+            <button type="button" class="num" value=0 onclick=onClickNumberButton(value)>0</button>
+            <button type="button" class="num" value="." onclick=onClickDicimalPoint(value)>.</button>
+            <button type="button" class="result" onclick=onClickCalculate()>=</button>
         </div>
     </div>
     <script src="./javascript/calcaulator.js"></script>
