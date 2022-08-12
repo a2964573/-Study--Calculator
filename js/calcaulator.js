@@ -4,13 +4,13 @@ let calculateMeterials=["",""];
 let operator=null; //연산자
 let displayValue=null;
 let result=null; //결과 값
-let resetCheck=0; //리셋 확인 0=불필요, 1=필요
+let resetCheck=false; //리셋 확인 false=불필요, true=필요
 let isPoint=false;
 
 //==========버튼이벤트==========//
 //숫자 버튼 이벤트
 function onClickNumberButton(value){
-    if(resetCheck === 0){
+    if(resetCheck === false){
         if(operator === null){ //연산자가 null이라면 진행(연산자 미입력은 첫번째 항 입력이 끝나지 않았다는 것을 의미)
             calculateMeterials[0]+=value; //첫번째 항에 입력
         } else{ //연산자가 null이 아니라면 진행(연산자를 입력은 첫번째 항 입력이 끝났다는 것을 의미)
@@ -30,7 +30,7 @@ function onClickNumberButton(value){
             display.value="";
             display.value+=value;
             calculateMeterials[1]+=value;
-            resetCheck=0; //리셋 값 초기화로 조건문 리셋 조건문 탈출
+            resetCheck=false; //리셋 값 초기화로 조건문 리셋 조건문 탈출
         }
     }
 }
@@ -141,7 +141,7 @@ function onClickClear(){
     displayValue=null;
     operator=null;
     result=null;
-    resetCheck=0;
+    resetCheck=false;
     isPoint=false;
     display.value="";
 }
@@ -173,7 +173,7 @@ function calculate(operator){
     }
     calculateMeterials[0]=result;
     display.value=result; //결과 값으로 변경
-    resetCheck=1; //계산 완료 후 리셋 필요 알림    
+    resetCheck=true; //계산 완료 후 리셋 필요 알림    
     dicimalPointCheck();
 }
 
